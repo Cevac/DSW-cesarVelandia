@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIT Y GITHUB</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        div {
+            background-color: bisque;
+            padding: 20px;
+        }
+        
+        div h1 {
+            text-align: center;
+        }
+        
+        section {
+            background-color: darkseagreen;
+        }
+        
+        section div a img {
+            display: block;
+            width: 150px;
+            padding-bottom: 15px;
+        }
+        
+        section div a {
+            text-decoration: none;
+            color: darkmagenta;
+        }
+        
+        section div {
+            display: inline-block;
+            background-color: inherit;
+        }
+        
+        .contenido {
+            background-color: greenyellow;
+        }
+        
+        .contenido h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>GIT y GITHUB</h1>
+
+        <br />
+        <br />
+        <h3>Objetivo general</h3>
+          <p>
+            Conocer y aprender a un nivel basico introductorio acerca de que es GIT y GITHUB <br> 
+            y cual es la importancia y utilidad de estas tecnologias en el campo del desarrollo
+            de software.
+
+        </p>
+        <h3>Objetivos especificos</h3>
+      
+        <ol>
+            <li>Conocer los comandos basicos de GIT </li>
+            <li>Conocer las funcionalidades basicas de Github asi como su configuracion inicial </li>
+            <li>Identificar las diferencias principales entre Git y Github y como estas dos herramientas se complementan </li>
+        </ol>
+    </div>
+    <section>
+        <h3>MATERIALES</h3>
+        <div>
+            <a href="https://git-scm.com/" target="_blank">
+                <img src="img/logo-git.png" alt="GIT">
+            </a>
+            <a href="https://git-scm.com/" target="_blank">Click aqu&iacute;</a>
+        </div>
+
+        <div>
+            <a href="https://github.com/" target="_blank">
+                <img src="img/logo-github.png" alt="">
+            </a>
+            <a href="https://github.com/" target="_blank">Click aqu&iacute;</a>
+        </div>
+
+    </section>
+
+    <div class="contenido">
+        <h2>CONTENIDO</h2>
+        <h2>INTRODUCCION A GIT</h2>
+        <p>
+            Git es un software de control de versiones que inicialmente fue diseñado y desarrollado por Linus Torvalds. Git está pensado en la eficiencia  , flexibilidad
+            y rendimiento a la hora de hacer uso y mantener nuestros proyectos de software con
+            un correcto versionamiento. <br> <br>
+
+            <b>Como entender GIT?</b>
+            <p>
+                Supongamos que tenemos un pequeño proyecto de desarrollar una pagina web. Durante este proceso ira aumentando nuestro codigo fuente debido a la implementacion de las caracteristicas que requieran  nuestra pagina web. 
+                Llegara un momento que nuestro proyecto necesite de tener un control de versiones para salvaguardar nuestro trabajo realizado hasta dicho punto , lo primero que se nos ocurriria es duplicar nuestra carpeta donde se esta desarrollando la pagina web y crear una especie de "backup". Esta idea puede ser util en una primera instancia pero se convierte anticuada a lo largo del tiempo , que sucederia si el dia de mañana te piden implementar una nueva caracteristica (feature) a la pagina web? posiblemente lo que hagas es duplicar nuevamente la carpeta de tu proyecto inicial , implementar la caracteristica y colocarle un nombre como Pagina web V 1.2. Esta forma de trabajar se vuelve insostenible ya que llegara un momento en que tendras demasiadas carpetas "backups" que no te seran utiles porque se vuelve muy complejo la revision y la integracion. 
+            </p>
+
+            <p>
+                Aqui es donde entra Git para solucionar estos incovenientes y mejorar ampliamente el control de versiones de nuestros proyectos. Con unos simples comandos de esta herramienta podremos mapear de forma robusta todo nuestro trabajo  a lo largo del tiempo   y navegar de forma eficiente y facil como si fuera un viaje a lo largo del tiempo sobre nuestras versiones y estados del codigo fuente en algun tiempo pasado del desarrollo.
+            </p>
+
+        </p>
+
+
+        <h3>Comandos basicos de GIT</h3>
+
+        <p>
+            Para empezar a trabajar con GIT requerimos crear nuestro repositorio local , que no es mas que un subdirectorio oculto llamado ".git" es aqui donde reside toda la "magia" que hace git por nosotros. <br>
+            Para crear el repositorio debemos ejecutar en la terminal de comandos lo siguiente:
+            <pre style="background-color:black; color:white; font-weight:bold;">
+                git init
+            </pre>
+            esto creara nuestro subdirectorio .git
+        </p>
+
+         <p>
+            Una vez comencemos a editar nuestros ficheros de cualquier tipo , Git empezara a detectar todos estos cambios y podremos consultarlo a traves del siguiente comando
+            <pre style="background-color:black; color:white; font-weight:bold;">
+                git status
+            </pre>
+            este comando nos indica que ficheros han sido modificados , eliminados , añadidos y cuales ficheros aun no estan versionados en el repositorio de git. Por ejemplo , si modificamos un archivo index.html , el comando git nos dira que este archivo ha sido editado y que sus nuevos cambios no estan guardados en el repositorio.
+        </p>
+
+         <p>
+            Hasta este punto , no tenemos versionado y "salvaguardados" los nuevos cambios hechos en el archivo index.html en nuestro repositorio. Para hacer este procedimiento  requerimos de dos  nuevos comandos:
+            <pre style="background-color:black; color:white; font-weight:bold;">
+                git add nombreDeArchivo
+            </pre>
+
+            el comando git add nos permite pasar los archivos que han sido modificados o creados a un "stagin area" donde posteriormente podremos salvaguardar estos archivos con los cambios impelmentados en nuestro repositorio. 
+
+
+            
+        </p>
+
+        <p>
+            Llegados a este punto solo nos queda hacer "commit" para tener salvaguardados todos los cambios que hayamos implementado en nuestro codigo fuente.
+            <pre style="background-color:black; color:white; font-weight:bold;">
+                git commit -m "Un mensaje indicativo"
+            </pre>
+            una vez hecho esto , nuestro codigo fuente actual quedara salvaguardado en el repositorio , pudiendolo consultar ese estado especifico en cualquier momento del desarrollo sin temer que algo se nos pierda o dañe.
+            
+        </p>
+    </div>
+
+    <hr />
+</body>
+
+</html>
