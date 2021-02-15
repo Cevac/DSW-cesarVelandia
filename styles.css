@@ -1,0 +1,142 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+
+nav{
+	display: flex;
+	background-color: #F0B429;
+	width: 100%;
+}
+
+nav > div{
+	padding: 30px 10px;
+	cursor: pointer;
+	flex-grow: 1;
+	text-align: center;
+}
+
+nav > div a{
+	font-family: 'Lucida Console' , monospace;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+	color:white;
+	cursor: pointer;
+}
+
+/*Hover menu*/
+
+nav > div:hover{
+	background-color: #005883;
+}
+
+nav > div:hover a{
+	color:#F0B429;
+}
+
+
+/*Contenido Flex*/
+
+.container-content{
+	display: flex;
+	max-width: 70%;
+	margin:auto;
+	margin-top: 20px;
+	justify-content: space-around;
+}
+
+.container-content > div{
+
+}
+
+
+
+/*Fin Contenido flex*/
+
+
+/*Dropdowns Sub items*/
+
+.dropdown{
+	position: relative;
+}
+
+.dropdown::after{
+	content: "\25BC";
+}
+
+.dropdown-items{
+	display: none;
+    position: absolute;
+    width: 100%;
+    padding: 0 20px;
+    top: 80px;
+    left: 0px;
+    z-index:2;
+    background-color: #005883;
+}
+
+.dropdown-items > a{
+	display: block;
+	padding: 10px 10px;
+}
+
+.dropdown-items > a:hover{
+	background-color: #005883;
+	color:white;
+}
+
+
+
+.dropdown:hover .dropdown-items{
+	display: block
+}
+
+
+/*Diseno tarjeta autor*/
+
+.tarjeta-autor{
+	border:1px solid #005883;
+	width: 400px;
+	height:300px;
+	border-radius: 20px;
+	box-shadow: 0 8px 16px 0 #b3b3b3;
+
+	text-align: center;
+	font-family: 'Helvetica';
+	line-height: 1.5;
+}
+
+.tarjeta-autor img{
+	width: 40%;
+	height: auto;
+	display: block;
+	margin:auto;
+}
+
+
+/*Fin diseno tarjeta autor*/
+
+/*Estilos de Inicio*/
+
+.card-objetivo{
+	background-color:   #005883;
+	border-radius: 10px;
+	padding: 30px;
+	color: #333333;
+	animation-name: changeColor;
+	animation-duration: 3s;
+	margin-top: 30px;
+	font-size: 18px;
+}
+
+@keyframes changeColor {
+  from {background-color: #333333;}
+  to {background-color: #F0B429;}
+}
+
+
+/*Fin Estilos de Inicio*/
